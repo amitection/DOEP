@@ -20,6 +20,7 @@ https://s3.amazonaws.com/drivers.mongodb.org/php/index.html
 
 Download '<b>php_mongo-1.5.1.zip</b>'
 
+
 <b>Steps for setting up:<b>
 
 Extract the above file.
@@ -33,3 +34,9 @@ Modify the <b>php.ini</b> file - Add '<b>extension=php_mongo.dll</b>'  in php.in
 One last thing. Fork this repo in the <b>wamp\www</b> directory.
 
 And you are all set.
+
+
+<b>Importing the Temporary Database.</b>
+
+Change your directory to the doep folder.
+Use '<b>mongorestore doep</b>' to restore database.
