@@ -1,0 +1,46 @@
+#navMenu {
+	margin:0;
+	padding:0;
+}
+
+#navMenu ul{
+	margin:0;
+	padding:0;
+	line-height:30px;
+}
+
+#navMenu li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	float:none;
+	position:relative;
+	background:#63C;
+}
+
+#navMenu ul li a{
+	text-align:center;
+	text-decoration:none;
+	height:30px;
+	width::150px;
+	display:block;
+	size:14px;
+	color:#FC3;
+	border:1px solid #000;
+}
+
+#navMenu ul ul{
+	position:absolute;
+	visibility:hidden;
+	top:32px;
+}
+
+#navMenu ul li:hover ul
+{
+	visibility:visible;
+}
+/**************************************************/
+#navMenu li:hover{
+	background:#F00;
+
+}
