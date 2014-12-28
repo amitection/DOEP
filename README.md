@@ -36,7 +36,10 @@ One last thing. Fork this repo in the <b>wamp\www</b> directory.
 And you are all set.
 
 
-<b>Importing the Temporary Database.</b>
 
-Change your directory to the doep folder.
+<b>Importing the Temporary Database:</b>
+
+Change your directory to the doep folder
 Use '<b>mongorestore doep</b>' to restore database.
+
+Source: http://docs.mongodb.org/manual/reference/program/mongorestore/
