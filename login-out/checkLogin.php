@@ -28,9 +28,10 @@
 			echo "Redirecting to User Home Page!";
 			header('Location:/DOEP/main/index.php');
 		}
-	else
-		echo "Failure";
-	
+	else{
+			
+			echo "Failure";
+		}
 	}
 	catch(MongoConnectionException $e)
 	{
