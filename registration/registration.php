@@ -35,9 +35,9 @@
 		if (!preg_match("/[0-9][A-Z]/",$_POST['prn']) or strlen($_POST['prn'])!=9)
 			$prnErr = "<br>Please Enter The Correct PRN no.";
 			
-		//check for duplicate prn
+		//check for duplicate prn -Not Working
 		if(preg_match("/[0-9][A-Z]/",$_POST['prn']) and strlen($_POST['prn'])==9)
-			if($db->user->findOne(array("prn"=>$_POST['prn'])))
+			if($db->$auth_coll->findOne(array("prn"=>$_POST['prn'])))
 				$prnErr="<br>PRN already in use by someone else.";
 	
 		//checking for password match
@@ -57,20 +57,22 @@
 			$secErr="<br>Warning:Please select a security question";
 			
 		//If all entered information is correct then successfull registration
-		if($passErr =="" and $prnErr= "" and $deptErr = "")
+		if($passErr =="" and $prnErr== "" and $deptErr == "" and $yearErr == "" and $secErr == "")
 		{
 			//Migrate to Login Page
 			$registration_success = "Registration Successfull";
 			
 			//Enter all the information from the form into the Database
 			$fname = $_POST['fname'];
-			
+				
 			if(empty($_POST['lname']))
 				$lname = " ";
 			else
 				$lname = $_POST['lname'];
 			
 			$prn = $_POST['prn'];
+			
+			$pass = $_POST['password'];
 			
 			$gender = $_POST['gender'];
 			
@@ -80,6 +82,33 @@
 			
 			$year = $_POST['year'];
 			
+			//-----------------------------
+			
+			$auth_document =  array(
+									'prn'=>$prn,
+									'pass'=>hash('sha512',$pass)
+									);
+									
+			$user_document = array(
+									'prn'=>$prn,
+									'personal_info'=>array(
+															'fname'=>$fname,
+															'lname'=>$lname,
+															'year'=>$year,
+															'dept'=>$dept,
+															'age'=>$age,
+															'contact'=>$_POST['phone'],
+															'email'=>$_POST['email'],
+															'gender'=>$_POST['gender'],
+															'sec_quest'=>$_POST['sec_quest'],
+															'sec_ans'=>$_POST['sec_ans']
+															)
+									);
+									
+			$db->$auth_coll->insert($auth_document);
+			$db->$user_coll->insert($user_document);
+			
+			header('Location:/DOEP/login-out/afterRegistration.php');			
 			
 		}
 		
@@ -113,7 +142,6 @@
     			  <label for="fname">* First Name</label></p> 
     			<input id="fname" name="fname" placeholder="First Name" required tabindex="1" type="text">
 					
-    			 
 				 
     			<p class="contact">
     			  <label for="lname">Last Name</label></p> 
@@ -146,7 +174,7 @@
 				 
 				 
                   <label class="age"> 
-                  <select class="select-style" name="AGE">
+                  <select class="select-style" name="age">
              
                   <option  value="none">Age</option>
                   <option  value="18">18</option>
