@@ -1,0 +1,13 @@
+db.cse_mit.findOne()
+
+cse_mit collection
+db.cse_mit.insert({
+	qid:"CSE_MIT2",
+	quest:"8088 is _______ bits wide.",
+	op1:"2",
+	op2:"4",
+	op3:"6",
+	op4:"8",
+	ans:"op4",
+	image:"none",
+});
