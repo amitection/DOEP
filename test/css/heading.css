@@ -1,0 +1,19 @@
+.heading {
+	font-size: large;
+	background-color: #09F;
+	height: 20px;
+	width: 1366px;
+	padding: 5px;
+	margin: 5px;
+	border-top-style: 5;
+	border-right-style: 5;
+	border-bottom-style: 5;
+	border-left-style: 5;
+	border-top-color: #039;
+	border-right-color: #039;
+	border-bottom-color: #039;
+	border-left-color: #039;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	
+}
