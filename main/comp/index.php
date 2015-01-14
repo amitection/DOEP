@@ -26,6 +26,9 @@
 	if(empty($_SESSION['prn'])) {
 		header("Location: logout.php");
 	}
+	if($_SESSION['dept'] != 'cse') {
+		header("Location: logout.php");
+	}
 	//***************************************************************
 	
 	
@@ -109,7 +112,7 @@ $img = getRandomFromArray($imgList);
         <!-- ###### -->
         <div id="left_column">
           <h2>Available Tests</h2>
-          <div class="imgholder"><a href="index.html"><img src="images/demo/220x80.gif" alt="" /></a></div>
+          <div class="imgholder"><a href="index.html"><img src="images/tests.png" alt="" /></a></div>
           <h2>Check Your Records</h2>
           <div class="imgholder"><a href="Records.html"><img src="images/demo/220x80.gif" alt="" /></a></div>
           <h2>Overall Ranking</h2>
@@ -122,14 +125,14 @@ $img = getRandomFromArray($imgList);
           <h2>Latest News &amp; Events</h2>
           <ul>
             <li class="clear">
-              <div class="imgl"><img src="images/demo/imgl.gif" alt="" /></div>
+              <div class="imgl"><img src="images/demo/mit.png" alt="" /></div>
               <div class="latestnews">
                 <p><a href="#">Sentumquisque morbi dui congue.</a></p>
                 <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. This template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template Licence</a></p>
               </div>
             </li>
             <li class="clear">
-              <div class="imgl"><img src="images/demo/imgl.gif" alt="" /></div>
+              <div class="imgl"><img src="images/demo/oomp.png" alt="" /></div>
               <div class="latestnews">
                 <p><a href="#">Sentumquisque morbi dui congue.</a></p>
                 <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files.</p>
