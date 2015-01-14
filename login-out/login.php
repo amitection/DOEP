@@ -22,7 +22,7 @@
     <h1 align="justify">Login</h1>
     <div align="justify"><br>
     </div>
-    <form method="POST" action="checkLogin.php">
+    <form method="POST" action="authenticate.php">
       <div align="justify">
         <input type="text" name="prn" placeholder="PRN">
         <input type="password" name="pass" placeholder="Password">
