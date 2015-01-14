@@ -2,12 +2,12 @@ db.cse_mit.findOne()
 
 cse_mit collection
 db.cse_mit.insert({
-	qid:"CSE_MIT2",
-	quest:"8088 is _______ bits wide.",
-	op1:"2",
-	op2:"4",
-	op3:"6",
-	op4:"8",
-	ans:"op4",
+	qid:"CSE_MIT4",
+	quest:"80186/80188 processors running at a speed of ranging from.",
+	op1:"3 MHz to 10 MHz",
+	op2:"5 MHz to 20 MHz",
+	op3:"6 MHz to 40 MHz",
+	op4:"none of the above",
+	ans:"op3",
 	image:"none",
 });

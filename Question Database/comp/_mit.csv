@@ -1,0 +1,33 @@
+CSE_MIT1## What function  displays row data in a column or column data in a row?## Hyperlink## Index## Transpose## Rows## op3## none
+CSE_MIT2## When you insert an Excel file into a Word document, the data are## Hyperlinked## Placed in a word table## Linked## Deleted## op2## none
+CSE_MIT3## Except for the _______ function, a formula with a logical function shows the word “TRUE” or “FALSE” as a result##  IF##XOR##AND## OR## op1## none
+CSE_MIT4## Macros are “run” or executed from the ….. menu.##  Insert## Format## Tools##  Data## op3## 
+CSE_MIT5## You can open the consolidate dialog box byt choosing Consolidate from the ….. menu.## Insert## Format## Tools## Data## op4## none
+CSE_MIT6## Each excel file is called a workbook because## It can contain text and data## It can be modified##  It can contain many sheets including worksheets and chart sheets## You have to work hard to create it## op3## none
+CSE_MIT7## Which types of charts can excel produce?## Line graphs and pie charts only##  Only line graphs## Bar charts## line graphs and pie charts## op4## none
+CSE_MIT8## How are data organized in a spreadsheet?## Lines and spaces## Layers and planes##  Rows and columns## Height and width## op3## none
+CSE_MIT9## What does the VLOOKUP function do?## Looks up text that contain ‘v’## Checks whether text is the same in one cell as in the next## Finds related records## All of above## op3## none
+CSE_MIT10## Gridlines## May be turned off for display but turned on for printing## May be turned on or off for printing##  The be turned off for display and printing## a##op3## none
+CSE_MIT11## You can print only an embedded chart by##  Moving the chart to a chart sheet before you print.## Formatting the chart before you print## Selecting the chart before you print##  a  and c## op4## none
+CSE_MIT12## Which of the following is a correct order of precedence in a formula calculation?##  Multiplication and division## exponential positive and negative value##  Multiplication and division## positive and negative values## op2## none
+CSE_MIT13##  A function inside another function is called a ….. function.## Nested##  Round## Sum## Text## op1## none
+CSE_MIT14## You are German supplier still invoices for parts in deutsche marks. How can you have Excel convert those sums to Euros?## On the Insert menu## click Symbol and from the currency symbols subset## select the Euro sign.## On the tools menu##op2## none
+CSE_MIT15## Which function calculates your monthly mortage payment?##  PMT (payments) PMT (payments)## NPER (number of periods)##  PV (present value)## All of above## op1## none
+CSE_MIT16## If you are working in English (US)## Chinese or Japanese## Excel 2002 can speak data as you enter it## to help you verify accuracy. How do you activate this feature?## Point to speech on the tools menu##op1## none
+CSE_MIT17## Which of the following methods can not be used to enter data in a cell?## Pressing an arrow key## Pressing the tab key##  Pressing the Esc key##  Clicking the enter button to the formula bar## op3## none
+CSE_MIT18## Which of the following will not set text in selected cells to italics?##  Pressing Ctrl + I on the keyboard##  Using the Tools – Wizard – Web Form menu item##  Using the Format – Cells – Font menu item## None of the above## op2## none
+CSE_MIT19## Which of the following methods cannot be used to edit the content of cell?##  Pressing the Alt key## Clicking the formula bar## Pressing F2##  Double clicking the cell## op1## none
+CSE_MIT20##8086 allows  ____________ of addressing space.##4GB##64GB##1MB##20MB##op3##none
+CSE_MIT21##The 80286 has a ________ bit address bus. ##24##12##10##20##op1##none
+CSE_MIT22##The 80286 gives the capability of accessing ____ of storage##4 MB##1 MB##2 MB##16 MB##op4##none
+CSE_MIT23##The 80286 speed could range between ___________##4 MHz and 10 MHz##2 MHz and 10 MHz##6 MHz and 25 MHz##none of these##op3##none
+CSE_MIT24##You can activate a cell by##Pressing the Tab key##Clicking the cell##Pressing an arrow key##All of above##op4##none
+CSE_MIT25##Which of the following setup options can not be set in the page setup dialog box?##Printer selection##Vertical or horizontal placement##Orientation##Row and column titles##op4##none
+CSE_MIT26##What term refers to a specific set of values saved with the workbook?##Range##Scenario##Trend line##What-if analysis##op3##none
+CSE_MIT27##Got functions? No? You need the insert function dialog box. How do you get it?##Right click a cell and then click insert##Click the insert menu and then click function##Type = in a cell##All of the above##op2##none
+CSE_MIT28##Which of the following describes how to select all the cells in a single column?##Right click on column and select Pick from list##Use data text to columns menu item##Left click on the gray column title button##Pressing Ctrl + A on the keyboard##op3##none
+CSE_MIT29##"when you use the fill effects in the format data series dialog box, you can not"##rotate text on the chart##select a fore ground color##select a pattern##select a background color##op1##none
+CSE_MIT30##Paper spreadsheets can have all the same advantages as an electronic spreadsheet except which of the following?##Rows and columns##Headings##Speed##None##op3##none
+CSE_MIT31##Which of the following is not a basic step in creating a worksheet?##Save the workbook##Modify the worksheet##Enter text and data##Copy the worksheet##op4##none
+CSE_MIT32##"What's a quick way to extend these numbers to a longer sequence, for instance 1 through 20?"##"Select both cells and then drag the fill handle over the range you want for instance 18 more rows"##"Select the range you want include both cells point to fill on the Edit menu and then click down."##"Copy the second cell, click in the cell below it on the standard toolbar click the down arrow on the Paste button and then click Paste Special"##All of above##op1##none
+CSE_MIT33##To insert three columns between columns D and E you would##Select column D##Select column E##"Select columns E F and G"##"Select columns D, E, and F."##op2##none
