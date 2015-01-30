@@ -112,7 +112,7 @@ $img = getRandomFromArray($imgList);
         <!-- ###### -->
         <div id="left_column">
           <h2>Available Tests</h2>
-          <div class="imgholder"><a href="index.html"><img src="images/tests.png" alt="" /></a></div>
+          <div class="imgholder"><a href="index.php"><img src="images/tests.png" alt="" /></a></div>
           <h2>Check Your Records</h2>
           <div class="imgholder"><a href="Records.html"><img src="images/demo/220x80.gif" alt="" /></a></div>
           <h2>Overall Ranking</h2>
@@ -127,8 +127,14 @@ $img = getRandomFromArray($imgList);
             <li class="clear">
               <div class="imgl"><img src="images/demo/mit.png" alt="" /></div>
               <div class="latestnews">
-                <p><a href="#">Sentumquisque morbi dui congue.</a></p>
-                <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. This template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template Licence</a></p>
+                <p><a href="#">Microprocessor Interfacing Techniques.</a></p>
+                <p>Click here for :<br> <a href="#" onclick="window.open('/DOEP/test/sehh5ZtzXe6.c/ph1.php','_blank');"> Phase 1</a>
+                	<br><a href="#" onclick="window.open('/DOEP/test/sehh5ZtzXe6.c/ph1.php','_blank');">Phase 2</a></p>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>&nbsp;</blockquote>
+                  </blockquote>
+                </blockquote>
               </div>
             </li>
             <li class="clear">

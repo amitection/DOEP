@@ -26,7 +26,7 @@
 			echo "User Authenticated";
 			echo "<br>";
 			echo "Redirecting to User Home Page!";
-			//header('Location:/DOEP/main/index.php');
+			
 			header('Location:/DOEP/login-out/authentication_successful.php');
 		}
 	else{
