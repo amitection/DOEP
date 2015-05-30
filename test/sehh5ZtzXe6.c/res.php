@@ -175,6 +175,9 @@ ul.social-networks li {
 	$sub_code = $_SESSION['sub_code'];
 	$collection = $sub_code;
 	
+	$date = $_SESSION['actualStartDate'];
+	$time = $_SESSION['actualStartTime'];
+	
 	}catch(MongoConnectionException $e)
 	{
 		die('Error Connecting to MongoDB Server');
@@ -221,7 +224,11 @@ ul.social-networks li {
     </caption>
     <tr>
       <th scope="row">Date</th>
-      <td>&nbsp;</td>
+      <td><?php echo $date;?></td>
+    </tr>
+	<tr>
+      <th scope="row">Time</th>
+      <td><?php echo $time;?></td>
     </tr>
     <tr>
       <th scope="row">Subject Code</th>
