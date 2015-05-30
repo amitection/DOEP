@@ -85,7 +85,7 @@ ul.social-networks li {
 
 </head>
 
-<body>
+<body onload = "setCountDown();">
 <div id="wrp">
   <div class="inr">
     <div class="inr"> 
@@ -148,6 +148,8 @@ ul.social-networks li {
 	display:block;
 }
 </style>
+
+
 
 <?php
 	session_start();
@@ -217,6 +219,20 @@ ul.social-networks li {
 		//var_dump($qid_array);
 		
 		$_SESSION['q_no'] = '1';
+		
+		//Timer Logic
+		$dateFormat = "d F Y";
+		$_SESSION['endDate'] = time() + (30*60);//Change the 30 to however many minutes you want to countdown
+		$startDate = time();
+		$secondsDiff = $_SESSION['endDate'] - $startDate;
+		$remainingDay     = floor($secondsDiff/60/60/24);
+		$remainingHour    = floor(($secondsDiff-($remainingDay*60*60*24))/60/60);
+		$_SESSION['remainingMinutes'] = floor(($secondsDiff-($remainingDay*60*60*24)-($remainingHour*60*60))/60);
+		$_SESSION['remainingSeconds'] = floor(($secondsDiff-($remainingDay*60*60*24)-($remainingHour*60*60))-($_SESSION['remainingMinutes']*60));
+		date_default_timezone_set('Asia/Kolkata');
+		$_SESSION['actualStartDate'] = date("d F Y",$startDate);// Use for future:: Noting when the exam was given
+		$_SESSION['actualStartTime'] = date("h:i:s A",$startDate);
+
 
 	}
 	
@@ -249,6 +265,18 @@ ul.social-networks li {
 		}
 		if($_SERVER['REQUEST_METHOD'] == 'POST')
 		{	
+			//Timer Logic
+
+			$startDate = time();
+			$secondsDiff = $_SESSION['endDate'] - $startDate;
+			$remainingDay     = floor($secondsDiff/60/60/24);
+			$remainingHour    = floor(($secondsDiff-($remainingDay*60*60*24))/60/60);
+			$_SESSION['remainingMinutes'] = floor(($secondsDiff-($remainingDay*60*60*24)-($remainingHour*60*60))/60);
+			$_SESSION['remainingSeconds'] = floor(($secondsDiff-($remainingDay*60*60*24)-($remainingHour*60*60))-($_SESSION['remainingMinutes']*60));
+			
+			
+			
+			
 			echo "inside request method";
 			//increment/decrement counter question counter
 			if(isset($_POST['prev']))
@@ -535,12 +563,45 @@ ul.social-networks li {
     </div>
 </div>
  </form>
-
+<!--######################################################-->
 <!-- Clock Logic -->
+
+
 <div style="position:fixed;left:1200px;top:50px;">       
 			<img src="1_files/clock.png">
-			
 </div>
+<div style="position:fixed;left:1270px;top:42px;"><font color = "#A80000" size = "5"><p id="remain"></p></font></div>
+
+<script type="text/javascript">
+  var days = <?php echo $remainingDay; ?>  
+  var hours = <?php echo $remainingHour; ?>  
+  var minutes = <?php echo $_SESSION['remainingMinutes']; ?>  
+  var seconds = <?php echo $_SESSION['remainingSeconds']; ?> 
+function setCountDown ()
+{
+  seconds--;
+  if (seconds < 0){
+      minutes--;
+      seconds = 59
+  }
+  if (minutes < 0){
+      hours--;
+      minutes = 59
+  }
+ // if (hours < 0){
+ //     days--;
+ //     hours = 23
+ // }
+  document.getElementById("remain").innerHTML = minutes+" : "+seconds+"";
+  SD=window.setTimeout( "setCountDown()", 1000 );
+  if (minutes == '00' && seconds == '00') { seconds = "00"; window.clearTimeout(SD);
+   		window.alert("Time is up. Press OK to continue."); // change timeout message as required
+  		window.location = "res.php" // Add your redirect url
+ 	} 
+
+}
+</script>
+
 
  
 
