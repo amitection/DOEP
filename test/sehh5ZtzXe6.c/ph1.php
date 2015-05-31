@@ -220,7 +220,8 @@ ul.social-networks li {
 		
 		$_SESSION['q_no'] = '1';
 		
-		//Timer Logic
+		//##########################Timer Logic#####################################
+		
 		$dateFormat = "d F Y";
 		$_SESSION['endDate'] = time() + (30*60);//Change the 30 to however many minutes you want to countdown
 		$startDate = time();
@@ -232,8 +233,16 @@ ul.social-networks li {
 		date_default_timezone_set('Asia/Kolkata');
 		$_SESSION['actualStartDate'] = date("d F Y",$startDate);// Use for future:: Noting when the exam was given
 		$_SESSION['actualStartTime'] = date("h:i:s A",$startDate);
-
-
+		
+		//##############################################################################
+		
+		//Setting Marking State of Question initially False
+		for($k=1;$k<=30;$k++)
+		{
+				$qid_mark[$k] = false;
+		}
+			$_SESSION['qid_mark'] = $qid_mark;
+		
 	}
 	
 	//==========================
@@ -262,11 +271,17 @@ ul.social-networks li {
 				{
 					die('Error:'.$e->getMessage());
 				}
+				
+			
 		}
+		
+		
 		if($_SERVER['REQUEST_METHOD'] == 'POST')
 		{	
-			//Timer Logic
-
+			echo "inside request method";
+			
+			//######################Timer Logic#############################
+			
 			$startDate = time();
 			$secondsDiff = $_SESSION['endDate'] - $startDate;
 			$remainingDay     = floor($secondsDiff/60/60/24);
@@ -274,10 +289,9 @@ ul.social-networks li {
 			$_SESSION['remainingMinutes'] = floor(($secondsDiff-($remainingDay*60*60*24)-($remainingHour*60*60))/60);
 			$_SESSION['remainingSeconds'] = floor(($secondsDiff-($remainingDay*60*60*24)-($remainingHour*60*60))-($_SESSION['remainingMinutes']*60));
 			
+			//################################################################
 			
 			
-			
-			echo "inside request method";
 			//increment/decrement counter question counter
 			if(isset($_POST['prev']))
 			{
@@ -378,6 +392,24 @@ ul.social-networks li {
 					echo "\n\nCorrect Ans: ".$count;
 				}
 				echo "\n\nCorrect Ans: ".$count;*/
+				
+			}
+			
+			if(isset($_POST['mark']))
+			{
+				//Marking and Unmarking a Question
+				$qid_mark = $_SESSION['qid_mark'];
+				if($qid_mark[$_SESSION['q_no']] == false)
+				{
+					$qid_mark[$_SESSION['q_no']] = true;
+					$_SESSION['qid_mark'] = $qid_mark;
+				}
+				else
+				{
+					$qid_mark[$_SESSION['q_no']] = false;
+					$_SESSION['qid_mark'] = $qid_mark;
+				}
+				
 				
 			}
 			
@@ -546,8 +578,13 @@ ul.social-networks li {
           <!-- header -->
           <div id="headar">
         <div class="q-lft-u">
-<div>Questions <span id="question_inc" style="color:#F00; font-weight:600;"><?php echo $_SESSION['q_no'];?></span> of 30</div>
-                          </div>
+			<div>Questions <span id="question_inc" style="color:#F00; font-weight:600;"><?php echo $_SESSION['q_no'];
+																							$qid_mark = $_SESSION['qid_mark'];
+																							if($qid_mark[$_SESSION['q_no']])
+																								echo "*";
+																						?></span> of 30</div>
+                          
+			</div>
       </div>
         </div>
   </div>
@@ -633,8 +670,20 @@ ul.social-networks li {
             }?> 
 		
              <div style="position:fixed;left:1200px;top:550px;">       
-			<button name = "submit" class="button">Submit</button>
+				<button name = "submit" class="button">Submit</button>
              </div>
+			 
+			 <div style="position:fixed;left:1200px;top:500px;">       
+				<?php 	$qid_mark = $_SESSION['qid_mark'];
+						if($qid_mark[$_SESSION['q_no']])
+							echo '<button name = "mark" class="unmark_button">Unmark</button>'; 
+						else
+							echo '<button name = "mark" class="mark_button">Mark</button>';
+				?>
+             </div>
+			 
+			 
+			 
 
 			 
 					</ul>
