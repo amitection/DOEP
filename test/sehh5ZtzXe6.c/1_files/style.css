@@ -3678,3 +3678,19 @@ margin-left:-10px !important;
   background: #3987b8;
   text-decoration: none;
 }
+
+.jump_button {
+  border-radius: 0px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  width:45px;
+  background: #3399FF;
+  padding: 11px 14px 11px 14px;
+  text-decoration: none;
+}
+
+.jump_button:hover {
+  background: #3987b8;
+  text-decoration: none;
+}
