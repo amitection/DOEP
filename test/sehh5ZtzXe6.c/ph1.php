@@ -131,8 +131,8 @@ ul.social-networks li {
 </style>
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 14px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 14px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:0px 0px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:0px 0px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 .tg .tg-78dq{font-family:Arial, Helvetica, sans-serif !important;;background-color:#329a9d;color:#ffffff;text-align:center}
 .tg .tg-ql64{font-family:Arial, Helvetica, sans-serif !important;;background-color:#329a9d;color:#ffffff}
 .tg .tg-94g7{font-family:Arial, Helvetica, sans-serif !important;;background-color:#329a9d;color:#ffffff}
@@ -381,6 +381,151 @@ ul.social-networks li {
 				
 			}
 			
+			if(isset($_POST['q_button']))
+			{
+				//CODE FOR DIRECTLY JUMPING TO QUESTIONS
+				
+				//Storing the select ans in an array
+				if(isset($_POST['op']))
+					$selected_radio = $_POST['op'];
+				else
+					$selected_radio = 'none';
+				
+				$qid_ans[$_SESSION['q_no']] = $selected_radio;
+		
+				$_SESSION['qid_ans'] = $qid_ans;
+				storeAndSaveDataInDatabase();
+					
+				//Redirecting to next question
+				
+				echo "Question Button Pressed";
+				
+				switch($_POST['q_button']){
+					case '1':
+						$_SESSION['q_no'] = '1';
+						break;
+						
+					case '2':
+						$_SESSION['q_no'] = '2';
+						break;
+						
+					case '3':
+						$_SESSION['q_no'] = '3';
+						break;
+						
+					case '4':
+						$_SESSION['q_no'] = '4';
+						break;
+					
+					case '5':
+						$_SESSION['q_no'] = '5';
+						break;
+						
+					case '6':
+						$_SESSION['q_no'] = '6';
+						break;
+						
+					case '7':
+						$_SESSION['q_no'] = '7';
+						break;
+						
+					case '8':
+						$_SESSION['q_no'] = '8';
+						break;
+						
+					case '9':
+						$_SESSION['q_no'] = '9';
+						break;
+						
+					case '10':
+						$_SESSION['q_no'] = '10';
+						break;
+						
+					case '11':
+						$_SESSION['q_no'] = '11';
+						break;
+						
+					case '12':
+						$_SESSION['q_no'] = '12';
+						break;
+						
+					case '13':
+						$_SESSION['q_no'] = '13';
+						break;
+						
+					case '14':
+						$_SESSION['q_no'] = '14';
+						break;
+						
+					case '15':
+						$_SESSION['q_no'] = '15';
+						break;
+						
+					case '16':
+						$_SESSION['q_no'] = '16';
+						break;
+						
+					case '17':
+						$_SESSION['q_no'] = '17';
+						break;
+						
+					case '18':
+						$_SESSION['q_no'] = '18';
+						break;
+						
+					case '19':
+						$_SESSION['q_no'] = '19';
+						break;
+						
+					case '20':
+						$_SESSION['q_no'] = '20';
+						break;
+						
+					case '21':
+						$_SESSION['q_no'] = '21';
+						break;
+						
+					case '22':
+						$_SESSION['q_no'] = '22';
+						break;
+						
+					case '23':
+						$_SESSION['q_no'] = '23';
+						break;
+						
+					case '24':
+						$_SESSION['q_no'] = '24';
+						break;
+						
+					case '25':
+						$_SESSION['q_no'] = '25';
+						break;
+						
+					case '26':
+						$_SESSION['q_no'] = '26';
+						break;
+						
+					case '27':
+						$_SESSION['q_no'] = '27';
+						break;
+						
+					case '28':
+						$_SESSION['q_no'] = '28';
+						break;
+						
+					case '29':
+						$_SESSION['q_no'] = '29';
+						break;
+						
+					case '30':
+						$_SESSION['q_no'] = '30';
+						break;
+						
+				}
+				
+					
+			}
+			
 		}
 		
 		$qid_array = $_SESSION['qid_array'];
@@ -504,46 +649,46 @@ ul.social-networks li {
 				 
 <table class="tg">
   <tr>
-    <th class="tg-ql64"><a style="color:rgb(210,210,210)" href="#">1</a></th>
-    <th class="tg-ql64"><a href="#">2</a></th>
-    <th class="tg-ql64"><a href="#">3</a></th>
-    <th class="tg-ql64"><a href="#">4</a></th>
-    <th class="tg-78dq"><a href="#">5</a></th>
+    <th class="tg-ql64"><button name = "q_button" value = "1" class="jump_button">1</button></th>
+    <th class="tg-ql64"><button name = "q_button" value = "2" class="jump_button">2</button></th>
+    <th class="tg-ql64"><button name = "q_button" value = "3" class="jump_button">3</button></th>
+    <th class="tg-ql64"><button name = "q_button" value = "4" class="jump_button">4</button></th>
+    <th class="tg-78dq"><button name = "q_button" value = "5" class="jump_button">5</button></th>
   </tr>
   <tr>
-    <td class="tg-ql64"><a href="#">6</a></td>
-    <td class="tg-94g7"><a href="#">7</a></td>
-    <td class="tg-ql64"><a href="#">8</a></td>
-    <td class="tg-94g7"><a href="#">9</a></td>
-    <td class="tg-78dq"><a href="#">10</a></td>
+    <td class="tg-ql64"><button name = "q_button" value = "6" class="jump_button">6</button></td>
+    <td class="tg-94g7"><button name = "q_button" value = "7" class="jump_button">7</button></td>
+    <td class="tg-ql64"><button name = "q_button" value = "8" class="jump_button">8</button></td>
+    <td class="tg-94g7"><button name = "q_button" value = "9" class="jump_button">9</button></td>
+    <td class="tg-78dq"><button name = "q_button" value = "10" class="jump_button">10</button></td>
   </tr>
   <tr>
-    <td class="tg-ql64"><a href="#">11</a></td>
-    <td class="tg-94g7"><a href="#">12</a></td>
-    <td class="tg-ql64"><a href="#">13</a></td>
-    <td class="tg-94g7"><a href="#">14</a></td>
-    <td class="tg-78dq"><a href="#">15</a></td>
+    <td class="tg-ql64"><button name = "q_button" value = "11" class="jump_button">11</button></td>
+    <td class="tg-94g7"><button name = "q_button" value = "12" class="jump_button">12</button></td>
+    <td class="tg-ql64"><button name = "q_button" value = "13" class="jump_button">13</button></td>
+    <td class="tg-94g7"><button name = "q_button" value = "14" class="jump_button">14</button></td>
+    <td class="tg-78dq"><button name = "q_button" value = "15" class="jump_button">15</button></td>
   </tr>
   <tr>
-    <td class="tg-ql64"><a href="#">16</a></td>
-    <td class="tg-94g7"><a href="#">17</a></td>
-    <td class="tg-ql64"><a href="#">18</a></td>
-    <td class="tg-94g7"><a href="#">19</a></td>
-    <td class="tg-78dq"><a href="#">20</a></td>
+    <td class="tg-ql64"><button name = "q_button" value = "16" class="jump_button">16</button></td>
+    <td class="tg-94g7"><button name = "q_button" value = "17" class="jump_button">17</button></td>
+    <td class="tg-ql64"><button name = "q_button" value = "18" class="jump_button">18</button></td>
+    <td class="tg-94g7"><button name = "q_button" value = "19" class="jump_button">19</button></td>
+    <td class="tg-78dq"><button name = "q_button" value = "20" class="jump_button">20</button></td>
   </tr>
   <tr>
-    <td class="tg-ql64"><a href="#">21</a></td>
-    <td class="tg-94g7"><a href="#">22</a></td>
-    <td class="tg-ql64"><a href="#">23</a></td>
-    <td class="tg-94g7"><a href="#">24</a></td>
-    <td class="tg-78dq"><a href="#">25</a></td>
+    <td class="tg-ql64"><button name = "q_button" value = "21" class="jump_button">21</button></td>
+    <td class="tg-94g7"><button name = "q_button" value = "22" class="jump_button">22</button></td>
+    <td class="tg-ql64"><button name = "q_button" value = "23" class="jump_button">23</button></td>
+    <td class="tg-94g7"><button name = "q_button" value = "24" class="jump_button">24</button></td>
+    <td class="tg-78dq"><button name = "q_button" value = "25" class="jump_button">25</button></td>
   </tr>
   <tr>
-    <td class="tg-ql64"><a href="#">26</a></td>
-    <td class="tg-94g7"><a href="#">27</a></td>
-    <td class="tg-ql64"><a href="#">28</a></td>
-    <td class="tg-94g7"><a href="#">29</a></td>
-    <td class="tg-78dq"><a href="#">30</a></td>
+    <td class="tg-ql64"><button name = "q_button" value = "26" class="jump_button">26</button></td>
+    <td class="tg-94g7"><button name = "q_button" value = "27" class="jump_button">27</button></td>
+    <td class="tg-ql64"><button name = "q_button" value = "28" class="jump_button">28</button></td>
+    <td class="tg-94g7"><button name = "q_button" value = "29" class="jump_button">29</button></td>
+    <td class="tg-78dq"><button name = "q_button" value = "30" class="jump_button">30</button></td>
   </tr>
   </div>
 </table> 
