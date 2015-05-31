@@ -281,8 +281,6 @@ ul.social-networks li {
 			//increment/decrement counter question counter
 			if(isset($_POST['prev']))
 			{
-				//Reload the answered radio button if already answered
-				
 				
 				//Storing the select ans in an array
 				if(isset($_POST['op']))
@@ -322,9 +320,7 @@ ul.social-networks li {
 			
 			if(isset($_POST['first']))
 			{
-				//Reload the answered radio button if already answered
-				
-				
+
 				//Storing the select ans in an array
 				if(isset($_POST['op']))
 					$selected_radio = $_POST['op'];
@@ -342,9 +338,6 @@ ul.social-networks li {
 			
 			if(isset($_POST['last']))
 			{
-				
-				//Reload the answered radio button if already answered
-				
 				
 				//Storing the select ans in an array
 				if(isset($_POST['op']))
@@ -448,28 +441,28 @@ ul.social-networks li {
           <div class="ans_dv">
                 <table width="600px" border="0" cellspacing="0" cellpadding="0">
               <tbody><tr>
-            <td width="4%" valign="top"><input type="radio" name="op" qno="1" id="answec1_1" value="op1"></td>
+            <td width="4%" valign="top"><input type="radio" name="op" qno="1" id="answec1_1" value="op1" <?php if($qid_ans[$_SESSION['q_no']]=='op1') echo 'checked'; ?>></td>
             <td width="96%" valign="top"><p style="width:450px; margin:0px; padding:0px 0px 20px 0px; font:normal 13px Ebrima, Arial, Helvetica, sans-serif;">
             <span style="color:#00F; font-size:14px;  font-family:Embrima;">A) </span><?php echo $curr_quest['op1']; ?> </p></td>
           </tr>
             </tbody></table>
                 <table width="600px" border="0" cellspacing="0" cellpadding="0">
               <tbody><tr>
-            <td width="4%" valign="top"><input type="radio" name="op" qno="1" id="answec1_2" value="op2"></td>
+            <td width="4%" valign="top"><input type="radio" name="op" qno="1" id="answec1_2" value="op2" <?php if($qid_ans[$_SESSION['q_no']]=='op2') echo 'checked'; ?>></td>
             <td width="96%" valign="top"><p style="width:450px; margin:0px; padding:0px 0px 20px 0px; font:normal 13px Ebrima, Arial, Helvetica, sans-serif;">
             <span style="color:#00F; font-size:14px;  font-family:Embrima;">B) </span><?php echo $curr_quest['op2']; ?> </p></td>
           </tr>
             </tbody></table>
                 <table width="600px" border="0" cellspacing="0" cellpadding="0">
               <tbody><tr>
-            <td width="4%" valign="top"><input type="radio" name="op" qno="1" id="answec1_3" value="op3"></td>
+            <td width="4%" valign="top"><input type="radio" name="op" qno="1" id="answec1_3" value="op3" <?php if($qid_ans[$_SESSION['q_no']]=='op3') echo 'checked'; ?>></td>
             <td width="96%" valign="top"><p style="width:450px; margin:0px; padding:0px 0px 20px 0px; font:normal 13px Ebrima, Arial, Helvetica, sans-serif;">
             <span style="color:#00F; font-size:14px;  font-family:Embrima;">C) </span><?php echo $curr_quest['op3']; ?>  </p></td>
           </tr>
             </tbody></table>
                 <table width="600px" border="0" cellspacing="0" cellpadding="0">
               <tbody><tr>
-            <td width="4%" valign="top"><input type="radio" name="op" qno="1" id="answec1_4" value="op4"></td>
+            <td width="4%" valign="top"><input type="radio" name="op" qno="1" id="answec1_4" value="op4" <?php if($qid_ans[$_SESSION['q_no']]=='op4') echo 'checked'; ?>></td>
             <td width="96%" valign="top"><p style="width:450px; margin:0px; padding:0px 0px 20px 0px; font:normal 13px Ebrima, Arial, Helvetica, sans-serif;">
             <span style="color:#00F; font-size:14px;  font-family:Embrima;">D) </span><?php echo $curr_quest['op4']; ?> </p></td>
           </tr>
