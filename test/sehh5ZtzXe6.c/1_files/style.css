@@ -3694,3 +3694,38 @@ margin-left:-10px !important;
   background: #3987b8;
   text-decoration: none;
 }
+
+	
+.mark_button {
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Arial;
+  font-size: 13px;
+  color: #ffffff;
+  background: #00CC33;
+  padding: 11px 30px 11px 30px;
+  text-decoration: none;
+  width:105px;
+}
+.mark_button:hover {
+  text-decoration: none;
+  background: #336600;
+}
+
+.unmark_button {
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Arial;
+  font-size: 13px;
+  color: #ffffff;
+  background: #E80000;
+  padding: 11px 30px 11px 30px;
+  text-decoration: none;
+  width:105px;
+}
+.unmark_button:hover {
+  text-decoration: none;
+  background: #A80000;
+}
