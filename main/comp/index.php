@@ -114,9 +114,9 @@ $img = getRandomFromArray($imgList);
           <h2>Available Tests</h2>
           <div class="imgholder"><a href="index.php"><img src="images/tests.png" alt="" /></a></div>
           <h2>Check Your Records</h2>
-          <div class="imgholder"><a href="Records.html"><img src="images/demo/220x80.gif" alt="" /></a></div>
+          <div class="imgholder"><a href="Records.php"><img src="images/records.png" alt="" /></a></div>
           <h2>Overall Ranking</h2>
-          <div class="imgholder"><a href="Overall Ranking.html"><img src="images/demo/220x80.gif" alt="" /></a></div>
+          <div class="imgholder"><a href="Overall_Ranking.php"><img src="images/ranking.png" alt="" /></a></div>
           <h2>Alumni</h2>
           <div class="imgholder"><a href="Allumni.html"><img src="images/demo/220x80.gif" alt="" /></a></div>
         </div>
