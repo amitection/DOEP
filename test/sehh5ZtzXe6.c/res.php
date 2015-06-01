@@ -213,7 +213,25 @@ ul.social-networks li {
 						$tot_attempted +=1;
 					
 				}
+				
+				$percentage_obtained = number_format(($tot_correct_ans/30)*100,2);
 				//echo "\n\nCorrect Ans: ".$count;
+				
+				//Storing the result in Users Database using PRN
+				
+				$result_analysis = array("sub_code"=>$sub_code,"date"=>$date,"time"=>$time,"attempted"=>$tot_attempted,
+								"correct answers"=>$tot_correct_ans, "percentage_obtained"=>$percentage_obtained);
+				
+				//var_dump($db->user->findOne(array("prn"=>$_SESSION['prn'],'test_record.time'=>$time)));
+				
+				if(!$db->user->findOne(array("prn"=>$_SESSION['prn'],'test_record.time'=>$time)))
+				{
+				$db->user->update(array("prn"=>$_SESSION['prn']),
+									array('$push'=>array('test_record'=>$result_analysis
+															    )
+														)
+										  );
+				}
 ?>
           
   <!--##############################################################Displaying the Result######################################################-->
@@ -248,7 +266,7 @@ ul.social-networks li {
     </tr>
     <tr>
       <th scope="row">% Obtained</th>
-      <td><font color="red"><b><?php global $tot_correct_ans; echo number_format(($tot_correct_ans/30)*100,2); echo "%";?></b></font></td>
+      <td><font color="red"><b><?php global $tot_correct_ans; echo $percentage_obtained."%";?></b></font></td>
     </tr>
   </table>
         </div>
