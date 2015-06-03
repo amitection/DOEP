@@ -333,7 +333,18 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #footer .fl_right #social{display:block; width:100%; margin:0 0 15px 0; padding:0; line-height:normal;}
 #footer .fl_right #social ul{margin:0; padding:0; list-style:none;}
 #footer .fl_right #social li{float:left; /* Only For IE */}
-#footer .fl_right #social a{display:block; float:left; width:49px; height:49px; margin-right:20px; overflow:hidden; text-indent:-4000em; background:url("../images/social-sprite.gif") no-repeat;}
+#footer .fl_right #social a{
+	display: block;
+	float: left;
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	text-indent: -4000em;
+
+
+no-repeat;			margin-left: 20px;
+	background-image: none;
+}
 #footer .fl_right #social li.last a{margin-right:0;}
 
 #footer .last{margin:0;}
@@ -361,3 +372,4 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #top .wrapper.row3 .rnd #container #homepage table {
 	font-family: Georgia, Times New Roman, Times, serif;
 }
+
