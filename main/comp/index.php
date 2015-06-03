@@ -79,7 +79,7 @@
     <!-- ###### -->
     <div id="topnav">
       <ul>
-        <li class="active">Welcome <?php echo $fname;?></li>
+        <li class="active">Welcome <a href="userProfile.php"><?php echo $fname;?></a></li>
       </ul>
     </div>
     <!-- ###### -->
@@ -176,37 +176,28 @@ $img = getRandomFromArray($imgList);
     <div id="footer" class="clear">
       <!-- ####################################################################################################### -->
       <div class="fl_left clear">
-        <div class="fl_left center"><img src="images/demo/worldmap.gif" alt="" /><br />
-          <a href="#">Find Us With Google Maps &raquo;</a></div>
-        <address>
-        Address Line 1<br />
-        Address Line 2<br />
-        Town/City<br />
-        Postcode/Zip<br />
-        <br />
-        Tel: xxxx xxxx xxxxxx<br />
-        Email: <a href="#">contact@domain.com</a>
-        </address>
+        <div class="fl_left center"><img src="images/aces.png" alt="ACES"/><br />
+        <font size="3"><a href="www.acesdyp.com">www.acesdyp.com</a></font></div>
       </div>
       <div class="fl_right">
         <div id="social" class="clear">
-          <p>Stay Up to Date With Whats Happening</p>
+          <p>Connect with us on          </p>
           <ul>
-            <li><a style="background-position:0 0;" href="#">Twitter</a></li>
-            <li><a style="background-position:-72px 0;" href="#">LinkedIn</a></li>
-            <li><a style="background-position:-142px 0;" href="#">Facebook</a></li>
-            <li><a style="background-position:-212px 0;" href="#">Flickr</a></li>
-            <li><a style="background-position:-282px 0;" href="#">RSS</a></li>
-          </ul>
+            <li><div style="height:40px; width:40px;margin-left:10px;"><img src="images/facebook.png" height="40" width="40" alt="Facebook"></div></li>
+ 			<li><div style="height:40px; width:40px; margin-left:40px;"><img src="images/google_plus.png" height="40" width="40" alt="Google Plus"></div></li>
+		  </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>Facebook &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Google Plus</p>
         </div>
         <div id="newsletter">
           <form action="#" method="post">
             <fieldset>
-              <legend>Subscribe To Our Newsletter:</legend>
-              <input type="text" value="Enter Email Here&hellip;" onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
-              <input type="text" id="subscribe" value="Submit" />
+              <legend>Incase of any 'Issues' or 'Bugs 'please contact us on: </legend>
+              <legend>	  <a href="#">aces.dypiet@gmail.com</a></legend>
             </fieldset>
           </form>
+          <p>Developed By : <a href="https://in.linkedin.com/in/amitection">Amit Prasad </a>&amp; <a href="https://in.linkedin.com/pub/ravi-yadav/96/a07/112">Ravi Yadav</a></p>
         </div>
       </div>
       <!-- ####################################################################################################### -->
@@ -216,8 +207,9 @@ $img = getRandomFromArray($imgList);
 <!-- ####################################################################################################### -->
 <div class="wrapper">
   <div id="copyright" class="clear">
-    <p class="fl_left">Copyright &copy; 2011 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_left">Copyright &copy; 2015 Licensed Under <a href="http://opensource.org/licenses/MIT">MIT</a>
+    
+	<!--"http://www.os-templates.com/"-->
   </div>
 </div>
 </body>
